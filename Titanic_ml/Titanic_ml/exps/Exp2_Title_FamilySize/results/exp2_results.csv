@@ -1,0 +1,6 @@
+Experiment,Model,Features,CV_Acc,CV_ROC,Public_Score
+Exp2,LogisticRegression,9,0.8272,0.8677,0.7823
+Exp2,RandomForest,9,0.8193,0.8727,0.78229
+Exp2,XGBoost,9,0.8406,0.8727,0.622
+Exp2,KNN,9,0.8193,0.8643,0.77511
+Exp2,SupportVectorMachine,9,0.8216,0.8523,0.78229

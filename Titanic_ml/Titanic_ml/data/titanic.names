@@ -1,0 +1,74 @@
+1. Title: Titanic - Machine Learning from Disaster
+
+2. Sources:
+    (a) Creator: Kaggle Dataset Team
+    (b) Donor: Kaggle Community
+    (c) Date: 2012 (continuously maintained and used)
+    (d) URL: https://www.kaggle.com/c/titanic
+
+3. Past Usage:
+    This dataset is one of the most well-known introductory datasets in machine learning, commonly used to illustrate binary classification problems.
+    It has been featured in countless tutorials, competitions, and educational materials to teach:
+        - Data preprocessing and cleaning
+        - Feature engineering
+        - Model selection and evaluation
+    Common algorithms used include:
+        - Logistic Regression
+        - Decision Tree, Random Forest, Gradient Boosting
+        - Support Vector Machine (SVM)
+        - Neural Networks (MLP)
+
+4. Relevant Information:
+        --- The Titanic dataset records detailed information on 891 passengers aboard the RMS Titanic, 
+            which sank in 1912 after colliding with an iceberg. Each record describes personal and 
+            travel-related attributes such as age, gender, passenger class, fare, and family members aboard.
+        --- The task is to predict whether a passenger survived (1) or not (0) based on these attributes.
+        --- This dataset serves as a complete example for understanding the end-to-end workflow of a 
+            machine learning project — from data cleaning to model evaluation.
+
+5. Number of Instances: 
+        --- Training set: 891 rows
+        --- Test set: 418 rows
+
+6. Number of Attributes: 12 total features, including the target variable Survived
+
+7. Attribute Information:
+        Attribute	 |  Description	                                         |  Type	 |  Notes
+        ---------------------------------------------------------------------------------------------------------------------
+        PassengerId	    Unique ID for each passenger	                        Integer	    Not used for modeling
+        Survived	    Survival indicator (0 = No, 1 = Yes)	                Integer	    Target variable
+        Pclass	        Passenger class (1 = Upper, 2 = Middle, 3 = Lower)	    Integer	    Related to socioeconomic status
+        Name	        Full name of the passenger	                            String	    Useful for extracting titles 
+                                                                                            (Mr, Mrs, Miss, etc.)
+        Sex	            Gender	                                                String	    male / female
+        Age	            Age of the passenger	                                Float	    Contains missing values
+        SibSp	        # of siblings/spouses aboard	                        Integer	    Used to build FamilySize
+        Parch	        # of parents/children aboard	                        Integer	    Used to build FamilySize
+        Ticket	        Ticket number	                                        String	    Often excluded from modeling
+        Fare	        Ticket fare	                                            Float	    Should be normalized or scaled
+        Cabin	        Cabin identifier	                                    String	    Many missing values
+        Embarked	    Port of embarkation                                     String	    Some missing values
+                        (C = Cherbourg, Q = Queenstown, S = Southampton)	
+        ---------------------------------------------------------------------------------------------------------------------            
+
+8. Missing Attribute Values:
+        Attribute	     |  Approx. Missing (%)	 |  Recommended Handling
+        --------------------------------------------------------------------------------------------------
+        Age	                ~20%	                Fill with median or group-based median by Sex & Pclass
+        Cabin	            ~77%	                Drop or extract first letter as category
+        Embarked	        <1%	                    Fill with mode (‘S’)
+        --------------------------------------------------------------------------------------------------
+
+Summary Statistics:
+	         Min  Max   Mean    SD   Class Correlation
+   sepal length: 4.3  7.9   5.84  0.83    0.7826   
+    sepal width: 2.0  4.4   3.05  0.43   -0.4194
+   petal length: 1.0  6.9   3.76  1.76    0.9490  (high!)
+    petal width: 0.1  2.5   1.20  0.76    0.9565  (high!)
+
+9. Class Distribution: 33.3% for each of 3 classes.
+        Class	 |  Meaning	           |  Percentage
+        --------------------------------------------
+        0	        Did not survive       61.6%
+        1	        Survived	          38.4%
+        --------------------------------------------

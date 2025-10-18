@@ -1,0 +1,5 @@
+EXP,MODEL,Feature,CV-ACC,CV_ROC,PUBLIC_SCORE,
+Exp1,LogisticRegression,7,0.7912,0.8484,0.76555,
+Exp2,LogisticRegression,9,0.8272,0.8677,0.7823,
+exp3,Random Forest,13,0.8474,0.8982,0.81578,
+,,,,,,
